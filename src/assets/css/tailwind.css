@@ -1,0 +1,83 @@
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v15-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: local(''),
+    url('../fonts/poppins-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/poppins-v15-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/poppins-v15-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/poppins-v15-latin-regular.svg#Poppins') format('svg');
+  /* Legacy iOS */
+}
+
+.transition-fade-enter,
+.transition-fade-exit {
+  transition: opacity 1000ms ease-out;
+}
+
+
+.transition-fade-enter {
+  opacity: 0;
+}
+
+.transition-fade-enter.transition-fade-enter-active {
+  opacity: 1;
+}
+
+.transition-fade-exit {
+  opacity: 1;
+}
+
+.transition-fade-exit-active {
+  opacity: 0;
+}
+
+/* my animation */
+
+.star {
+  position: absolute;
+  height: 4px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-45deg,
+      #eef0f5, rgba(0, 0, 255, 0));
+  
+  filter: drop-shadow(0 0 6px #d7dff0);
+  animation: tail 3000ms ease-in-out infinite,
+  shooting 3000ms ease-in 4000ms infinite;
+}
+
+/* This code will help to generate
+      effect in tail of star */
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 50px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+/* Here we make shooting effect */
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150px);
+  }
+}
